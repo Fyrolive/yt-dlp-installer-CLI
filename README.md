@@ -4,27 +4,21 @@ Install yt-dlp, ffmpeg and a CLI for easy and quick video downloading.
 Allow YOUTUBE videos and mp3 downloading by simply entering the link of the video (using yt-dlp).
 
 
-## How to use
+## How to INSTALL
+
+Click on the executable file.
+
+## How to USE
 
 1. Launch the bat file
 
 2. Select the video download mod :
 
     1 - Video
-<<<<<<< HEAD
     2 - MP3 Audio
-=======
->>>>>>> 93faf8e917ffe76a863a6494d7263d31d1ccd4f2
-    2 - Video clip
+    3- Video clip
 
 3. Enter the url then press enter to download the video.
-
-
-## Parameters
-
-You can change the download file path in the parameters.
-
-ex: --
 
 
 ## Installation process
