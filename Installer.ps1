@@ -14,24 +14,25 @@ New-Item -ItemType "Directory" -Path $binDir
 
 
 Write-Host "Executing depedencies installation"
-& (Join-Path $scriptsDir "dependencies_installer.ps1")
+#& (Join-Path $scriptsDir "dependencies_installer.ps1")
 
 Write-Host "Executing global variable adding"
-& (Join-Path $scriptsDir "path_variable_adder.ps1")
+#& (Join-Path $scriptsDir "path_variable_adder.ps1")
 
 Write-Host "Creating CLI shortcut"
 #CLI
 Copy-Item `
-    "$PSScriptRoot\CLI\Youtube_downloader_CLI.bat" `
-    "$binDir\Youtube_downloader_CLI.bat"
+    "$PSScriptRoot\Youtube_downloader_CLI" `
+    "$binDir\Youtube_downloader_CLI" `
+    -Recurse
 
 #shortcut
 $DesktopPath = [Environment]::GetFolderPath("Desktop")
 
 $shell = New-Object -ComObject WScript.Shell
-$shortcut = $shell.CreateShortcut("$DesktopPath\Youtube_Downloader_CLI.lnk")
-$shortcut.TargetPath = "$binDir\Youtube_downloader_CLI.bat"
-$shortcut.IconLocation =  "$PSScriptRoot\ico.png"
+$shortcut = $shell.CreateShortcut("$DesktopPath\Youtube_downloader_CLI.lnk")
+$shortcut.TargetPath = "$binDir\Youtube_downloader_CLI\Youtube_downloader_CLI.bat"
+$shortcut.IconLocation = "$binDir\Youtube_downloader_CLI\ico.ico"
 $shortcut.Save()
 
 Write-Host 'Installation complete ! Press any key to continue...'
