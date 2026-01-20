@@ -30,7 +30,7 @@ Copy-Item `
 $DesktopPath = [Environment]::GetFolderPath("Desktop")
 
 $shell = New-Object -ComObject WScript.Shell
-$shortcut = $shell.CreateShortcut("$DesktopPath\Youtube_downloader_CLI.lnk")
+$shortcut = $shell.CreateShortcut("$DesktopPath\YTB_DL.lnk")
 $shortcut.TargetPath = "$binDir\Youtube_downloader_CLI\Youtube_downloader_CLI.bat"
 $shortcut.IconLocation = "$binDir\Youtube_downloader_CLI\ico.ico"
 $shortcut.Save()
