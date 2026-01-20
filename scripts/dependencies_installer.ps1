@@ -2,17 +2,8 @@ $ErrorActionPreference = "Stop"
 
 Write-Host "Installation of youtube downloader started"
 
-#Creating directory and path variables
+#path variable
 $binDir = "$env:LOCALAPPDATA\yt-dlp"
-Write-Host "Installation path : $binDir"
-#if the file already exist, delete it
-if(Test-Path $binDir) {
-    Write-Host "Removing previous existing files..."
-    Remove-Item -Recurse -Force -Confirm:$false $binDir
-}
-
-New-Item -ItemType "Directory" -Path $binDir
-
 
 #yt-dlp
 Write-Host "Installation of yt-dlp started..."
