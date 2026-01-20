@@ -14,10 +14,10 @@ New-Item -ItemType "Directory" -Path $binDir
 
 
 Write-Host "Executing depedencies installation"
-#& (Join-Path $scriptsDir "dependencies_installer.ps1")
+& (Join-Path $scriptsDir "dependencies_installer.ps1")
 
 Write-Host "Executing global variable adding"
-#& (Join-Path $scriptsDir "path_variable_adder.ps1")
+& (Join-Path $scriptsDir "path_variable_adder.ps1")
 
 Write-Host "Creating CLI shortcut"
 #CLI
