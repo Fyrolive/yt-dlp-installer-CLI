@@ -1,14 +1,18 @@
 # yt-dlp-installer-CLI
 Install yt-dlp, ffmpeg and a CLI for easy and quick video downloading.
 
-Allow YOUTUBE videos and mp3 downloading by simply entering the link of the video (using yt-dlp).
+Allow YOUTUBE videos and mp3 downloading by simply entering the link of the video (using yt-dlp & ffmpeg).
+
+WINDOWS ONLY !!!!
 
 
 ## How to INSTALL
 
-Extract the archive, then click on Installer.ps1.
+Extract the archive, then open Installer.ps1 with PowerShell (do not need to be as admin).
 
-You can then delete the archive.
+When installation complete, close the script, you can then delete the archive and the extracted files.
+
+Shortcut will be created on desktop.
 
 ## How to USE
 
@@ -38,7 +42,13 @@ The programm will :
 
 ## Githubs
 
-yt-dlp github : https://github.com/yt-dlp/yt-dlp
-ffmpeg github : https://github.com/BtbN/FFmpeg-Builds/releases
+yt-dlp github : https://github.com/yt-dlp/yt-dlp - Unlicense
+ffmpeg github : https://github.com/BtbN/FFmpeg-Builds/releases - LGPL/GPL depending on build
+
+
+## DISCLAIMER
+
+⚠️ This tool is provided for educational purposes only.
+The user is responsible for complying with local laws.
 
 ! The video downloader and other dependencies are not made by me, this project just allow quick installation and provide a simple CLI for the upper depedencies. !
