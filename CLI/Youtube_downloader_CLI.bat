@@ -10,13 +10,13 @@ echo If you seem to get trouble you didn't have before, try to relaunch the inst
 :: User app
 ::============
 
+echo Checking for yt-dlp updates (ffmpeg updates will not be checked !)...
+yt-dlp -U
+
 :main
 echo ================================
 echo   yt-dlp Downloader (Downloads)
 echo ================================
-
-echo Checking for yt-dlp updates ...
-yt-dlp -U
 
 echo 1 - Video (better quality)
 echo 2 - MP3 Audio
