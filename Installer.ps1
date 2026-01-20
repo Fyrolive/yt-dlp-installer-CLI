@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 $root = $PSScriptRoot
-$scriptDir = Join-Path $root "scripts"
+$scriptsDir = Join-Path $root "scripts"
 $binDir = "$env:LOCALAPPDATA\yt-dlp"
 
 Write-Host "Installation path : $binDir"
@@ -14,12 +14,10 @@ New-Item -ItemType "Directory" -Path $binDir
 
 
 Write-Host "Executing depedencies installation"
-Invoke-Item (start powershell ((Split-Path $MyInvocation.InvocationName) + "\scripts\dependencies_installer.ps1.ps1"))
-
+& (Join-Path $scriptsDir "dependencies_installer.ps1")
 
 Write-Host "Executing global variable adding"
-Invoke-Item (start powershell ((Split-Path $MyInvocation.InvocationName) + "\scripts\path_variable_adder.ps1"))
-
+& (Join-Path $scriptsDir "path_variable_adder.ps1")
 
 Write-Host "Creating CLI shortcut"
 #CLI
